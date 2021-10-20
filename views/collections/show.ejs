@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title></title>
+    </head>
+    <body>
+        <div class="item-container">
+            <h3><%=collection.name%></h3>
+            <img src="<%=collection.img%>" alt="">
+            <p><%=collection.description%></p>
+            <p><%=collection.location%></p>
+            <p><%=collection.memory%></p>
+        </div>
+        <a href="/collections">back to collection</a>
+        <a href="/collections/<%=collection.id%>/edit">edit item</a>
+        <form class="" action="/collections/<%=collection.id%>?_method=DELETE" method="POST">
+            <input type="submit" name="" value="delete">
+        </form>
+    </body>
+</html>

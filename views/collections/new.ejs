@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title></title>
+    </head>
+    <body>
+        <h1>add new collection item</h1>
+        <form class="" action="/collections" method="POST">
+            <label for="name">item name:</label>
+            <input type="text" name="name" value="<%=collection.name%>">
+            <label for="name">description:</label>
+            <input type="text" name="description" value="<%=collection.description%>">
+            <label for="name">image link:</label>
+            <input type="text" name="img" value="<%=collection.img%>">
+            <label for="name">memory:</label>
+            <input type="text" name="memory" value="<%=collection.memory%>">
+            <label for="name">item name:</label>
+            <input type="text" name="location" value="<%=collection.location%>">
+            <input type="submit" name="" value="add item">
+        </form>
+        <a href="/collections">back to collection</a>
+    </body>
+</html>
