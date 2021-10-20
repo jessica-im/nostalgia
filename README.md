@@ -1,7 +1,7 @@
 # nostalgia
 
 # nostalgia
-an ode to nostalgia and growing up in the 90s.
+an ode to nostalgia and growing up in the 90s - build your time capsule.
 
 ## About nostalgia
 an ode to growing up in the 90s where:
