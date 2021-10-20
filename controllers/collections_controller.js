@@ -1,7 +1,7 @@
 const express = require('express')
 const Collection = require('../models/collections.js')
 const collections = express.Router()
-const collectionSeed = require('../models/collectionSeed');
+const collectionSeed = require('../models/collectionSeed.js');
 
 // new
 collections.get('/new', (req, res) => {
