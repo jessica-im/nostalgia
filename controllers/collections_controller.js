@@ -62,4 +62,15 @@ collections.get('/', (req, res) => {
     })
 })
 
+// seed 
+app.get('/seed', (req, res) => {
+  // drop database - prevents from seeding the same data over and over. But remember, it will drop all new changes to your database!
+  Product.deleteMany({}, ()=> {});
+  // this is the code to actually seed the database
+  Product.create(productSeed, (error, data) => {
+    // you can also change the second part to res.status(200).redirect('/products') or wherever you want to go.
+    error ? res.status(400).json(error) : res.status(200).json(data);
+  });
+})
+
 module.exports = collections;

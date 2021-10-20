@@ -6,6 +6,7 @@ const collectionSchema = new mongoose.Schema({
     img: String,
     memory: String,
     location: String,
+    date: String,
 })
 
 const Collection = mongoose.model('Collection', collectionSchema)
