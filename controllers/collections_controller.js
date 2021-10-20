@@ -1,19 +1,18 @@
 const express = require('express')
 const Collection = require('../models/collections.js')
 const collections = express.Router()
-const collectionSeed = require('../models/productSeed');
+const collectionSeed = require('../models/collectionSeed');
 
 // new
 collections.get('/new', (req, res) => {
-    res.render('collections/new.ejs', {currentUser: req.session.currentUser})
+    res.render('collections/new.ejs')
 })
 
 // edit
 collections.get('/:id/edit', (req, res) => {
     Collection.findById(req.params.id, (error, foundCollection) => {
         res.render('collections/edit.ejs', {
-            collection: foundCollection,
-            currentUser: req.session.currentUser
+            collection: foundCollection
         })
     })
 })
@@ -27,16 +26,11 @@ collections.delete('/:id', (req, res) => {
 
 // show
 collections.get('/:id', (req, res) => {
-    if (req.session.currentUser) {
-        Collection.findById(req.params.id, (error, foundCollection) => {
+    Collection.findById(req.params.id, (error, foundCollection) => {
             res.render('collections/show.ejs', {
-                collection: foundCollection,
-                currentUser: req.session.currentUser
-            })
+                collection: foundCollection
         })
-    } else {
-        res.redirect('/sessions/new')
-    }
+    })
 })
 
 // update
@@ -64,14 +58,20 @@ collections.get('/', (req, res) => {
 })
 
 // seed
-app.get('/seed', (req, res) => {
-  // drop database - prevents from seeding the same data over and over. But remember, it will drop all new changes to your database!
-  Collection.deleteMany({}, ()=> {});
-  // this is the code to actually seed the database
-  Collection.create(collectionSeed, (error, data) => {
-    // you can also change the second part to res.status(200).redirect('/products') or wherever you want to go.
-    error ? res.status(400).json(error) : res.status(200).json(data);
-  });
-})
+// collections.get('/seed', (req, res) => {
+//   // drop database - prevents from seeding the same data over and over. But remember, it will drop all new changes to your database!
+//   Collection.deleteMany({}, ()=> {});
+//   // this is the code to actually seed the database
+//   Collection.create(collectionSeed, (error, data) => {
+//     // you can also change the second part to res.status(200).redirect('/products') or wherever you want to go.
+//     error ? res.status(400).json(error) : res.status(200).json(data);
+//   });
+// })
+
+// Collection.create(collectionSeed, (err, data) => {
+//     if (err) {
+//         console.log(err.message);
+//     };
+// })
 
 module.exports = collections;
