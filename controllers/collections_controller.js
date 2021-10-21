@@ -35,7 +35,8 @@ collections.get('/:id', (req, res) => {
 
 // update
 collections.put('/:id', (req, res) => {
-    Collections.findByIdAndUpdate(req.params.id, req.body, {new: true}, (error, updatedModel) => {
+    console.log('updating...');
+    Collection.findByIdAndUpdate(req.params.id, req.body, {new: true}, (error, updatedModel) => {
             res.redirect('/collections')
         }
     )
