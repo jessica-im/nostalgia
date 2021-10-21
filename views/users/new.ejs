@@ -8,10 +8,18 @@
         <div class="signupContainer">
             <h1>sign up</h1>
             <form class="signup" action="/users" method="POST">
-                <label for="name">Username:</label>
+                <label for="name">first name:</label>
+                <input type="text" name="name" required/>
+                <label for="email">email:</label>
+                <input type="email" name="email" required/>
+                <label for="username">username:</label>
                 <input type="text" name="username" required/>
-                <label for="password">Password:</label>
-                <input type="password" id="password" name="password" />
+                <label for="password">password:</label>
+                <input type="password" id="password" name="password" required />
+                <label for="city">city:</label>
+                <input type="text" name="city" required/>
+                <label for="city">state:</label>
+                <input type="text" name="state" required/>
                 <br>
                 <input type="submit" value="sign up">
             </form>

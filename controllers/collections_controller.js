@@ -1,65 +1,65 @@
 const express = require('express')
 const Collection = require('../models/collections.js')
-const collections = express.Router()
+const timecapsule = express.Router()
 const collectionSeed = require('../models/collectionSeed.js');
 
 // new
-collections.get('/new', (req, res) => {
-    res.render('collections/new.ejs')
+timecapsule.get('/new', (req, res) => {
+    res.render('timecapsule/new.ejs')
 })
 
 // edit
-collections.get('/:id/edit', (req, res) => {
+timecapsule.get('/:id/edit', (req, res) => {
     Collection.findById(req.params.id, (error, foundCollection) => {
-        res.render('collections/edit.ejs', {
+        res.render('timecapsule/edit.ejs', {
             collection: foundCollection
         })
     })
 })
 
 // delete
-collections.delete('/:id', (req, res) => {
+timecapsule.delete('/:id', (req, res) => {
     Collection.findByIdAndRemove(req.params.id, (err, deletedCollection) => {
-        res.redirect('/collections')
+        res.redirect('/timecapsule')
     })
 })
 
 // show
-collections.get('/:id', (req, res) => {
+timecapsule.get('/:id', (req, res) => {
     Collection.findById(req.params.id, (error, foundCollection) => {
-            res.render('collections/show.ejs', {
+            res.render('timecapsule/show.ejs', {
                 collection: foundCollection
         })
     })
 })
 
 // update
-collections.put('/:id', (req, res) => {
+timecapsule.put('/:id', (req, res) => {
     console.log('updating...');
     Collection.findByIdAndUpdate(req.params.id, req.body, {new: true}, (error, updatedModel) => {
-            res.redirect('/collections')
+            res.redirect('/timecapsule')
         }
     )
 })
 
 // create
-collections.post('/', (req, res) => {
+timecapsule.post('/', (req, res) => {
     Collection.create(req.body, (error, createdCollection) => {
-        res.redirect('/collections')
+        res.redirect('/timecapsule')
     })
 })
 
 // index
-collections.get('/', (req, res) => {
+timecapsule.get('/', (req, res) => {
     Collection.find({}, (error, fullCollection) => {
-        res.render('collections/index.ejs', {
+        res.render('timecapsule/index.ejs', {
             collections: fullCollection
         })
     })
 })
 
 // seed
-collections.get('/seed', (req, res) => {
+timecapsule.get('/seed', (req, res) => {
   // drop database - prevents from seeding the same data over and over. But remember, it will drop all new changes to your database!
   Collection.deleteMany({}, ()=> {});
   // this is the code to actually seed the database
@@ -69,4 +69,4 @@ collections.get('/seed', (req, res) => {
   });
 })
 
-module.exports = collections;
+module.exports = timecapsule;

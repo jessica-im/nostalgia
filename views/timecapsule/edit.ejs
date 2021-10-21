@@ -6,7 +6,7 @@
     </head>
     <body>
         <h1>edit collection item</h1>
-        <form class="" action="/collections/<%=collection.id%>?_method=PUT" method="POST">
+        <form class="" action="/timecapsule/<%=collection.id%>?_method=PUT" method="POST">
             <label for="name">item name:</label>
             <input type="text" name="name" value="<%=collection.name%>">
 
@@ -24,9 +24,9 @@
 
             <label for="date">date:</label>
             <input type="text" name="date" value="<%=collection.date%>">
-            
+
             <input type="submit" name="" value="edit item">
         </form>
-        <a href="/collections">back to collection</a>
+        <a href="/timecapsule">back to collection</a>
     </body>
 </html>

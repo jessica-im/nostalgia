@@ -59,7 +59,7 @@ const collectionController = require('./controllers/collections_controller.js')
 const userController = require('./controllers/users_controller.js')
 const sessionsController = require('./controllers/sessions_controller.js')
 
-app.use('/collections', collectionController)
+app.use('/timecapsule', collectionController)
 app.use('/users', userController)
 app.use('/sessions', sessionsController)
 
