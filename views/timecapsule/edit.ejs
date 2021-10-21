@@ -5,10 +5,13 @@
         <title></title>
     </head>
     <body>
-        <h1>edit collection item</h1>
+        <h1>edit capsule item</h1>
         <form class="" action="/timecapsule/<%=item.id%>?_method=PUT" method="POST">
-            <label for="name">item name:</label>
+            <label for="name">your name:</label>
             <input type="text" name="name" value="<%=item.name%>">
+
+            <label for="item">item name:</label>
+            <input type="text" name="item" value="<%=item.item%>">
 
             <label for="location">location:</label>
             <input type="text" name="location" value="<%=item.location%>">
@@ -23,7 +26,7 @@
             <input type="text" name="memory" value="<%=item.memory%>">
 
             <label for="words">wise words for future self:</label>
-            <input type="text" name="words" value="<%=item.description%>">
+            <input type="text" name="words" value="<%=item.words%>">
 
             <input type="submit" name="" value="edit item">
         </form>

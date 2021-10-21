@@ -2,17 +2,32 @@
 <html lang="en" dir="ltr">
     <head>
         <meta charset="utf-8">
-        <title></title>
+        <title>~nostalgia~</title>
+        <link rel="stylesheet" href="/css/styles.css">
     </head>
     <body>
-        <h1>my collection</h1>
+        <div class="header-container">
+            <h1>time capsule</h1>
+        </div>
         <div class="capsule-container">
             <% for (let i = 0; i < timeCapsule.length; i++) { %>
-                <div class="capsule-item-container">
-                    <img src="<%=timeCapsule[i].img%>" alt="">
-                    <a href="/timecapsule/<%=timeCapsule[i]._id%>"><%=timeCapsule[i].name%></a>
-                    <p><%=timeCapsule[i].location%></p>
-                </div>
+                <% if (i % 2 === 0){ %>
+                    <div class="capsule-item-container-even">
+                        <a href="/timecapsule/<%=timeCapsule[i]._id%>"><img src="<%=timeCapsule[i].img%>" alt=""></a>
+                        <div class="capsule-item-copy-even">
+                            <p>"<%=timeCapsule[i].words%>"</p>
+                            <a href="/timecapsule/<%=timeCapsule[i]._id%>">-<%=timeCapsule[i].name%></a>
+                        </div>
+                    </div>
+              <% } else { %>
+                    <div class="capsule-item-container-odd">
+                        <a href="/timecapsule/<%=timeCapsule[i]._id%>"><img src="<%=timeCapsule[i].img%>" alt=""></a>
+                        <div class="capsule-item-copy-odd">
+                            <p>"<%=timeCapsule[i].words%>"</p>
+                            <a href="/timecapsule/<%=timeCapsule[i]._id%>">-<%=timeCapsule[i].name%></a>
+                        </div>
+                    </div>
+                <% } %>
             <% } %>
         </div>
     </body>
