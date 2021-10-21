@@ -44,6 +44,7 @@ timecapsule.put('/:id', (req, res) => {
 
 // create
 timecapsule.post('/', (req, res) => {
+    // req.body.user = req.session.currentUser
     Item.create(req.body, (error, createdItem) => {
         res.redirect('/timecapsule')
     })
@@ -56,17 +57,6 @@ timecapsule.get('/', (req, res) => {
             timeCapsule: fullCapsule
         })
     })
-})
-
-// seed
-timecapsule.get('/seed', (req, res) => {
-  // drop database - prevents from seeding the same data over and over. But remember, it will drop all new changes to your database!
-  Item.deleteMany({}, ()=> {});
-  // this is the code to actually seed the database
-  Item.create(collectionSeed, (error, data) => {
-    // you can also change the second part to res.status(200).redirect('/products') or wherever you want to go.
-    error ? res.status(400).json(error) : res.status(200).json(data);
-  });
 })
 
 module.exports = timecapsule;

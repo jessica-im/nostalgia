@@ -1,7 +1,9 @@
 const mongoose = require('mongoose');
 
 const itemSchema = new mongoose.Schema({
-    name: {type: String, required: true},
+    item: {type: String, required: true},
+    // user: String,
+    name: String,
     location: String,
     date: String,
     img: String,
