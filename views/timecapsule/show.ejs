@@ -6,16 +6,16 @@
     </head>
     <body>
         <div class="item-container">
-            <h3><%=collection.name%></h3>
-            <img src="<%=collection.img%>" alt="">
-            <p><%=collection.description%></p>
-            <p><%=collection.date%></p>
-            <p><%=collection.location%></p>
-            <p><%=collection.memory%></p>
+            <h3><%=item.name%></h3>
+            <img src="<%=item.img%>" alt="">
+            <p><%=item.description%></p>
+            <p><%=item.date%></p>
+            <p><%=item.location%></p>
+            <p><%=item.memory%></p>
         </div>
-        <a href="/timecapsule">back to collection</a>
-        <a href="/timecapsule/<%=collection.id%>/edit">edit item</a>
-        <form class="" action="/timecapsule/<%=collection.id%>?_method=DELETE" method="POST">
+        <a href="/timecapsule">back to capsule</a>
+        <a href="/timecapsule/<%=item.id%>/edit">edit item</a>
+        <form class="" action="/timecapsule/<%=item.id%>?_method=DELETE" method="POST">
             <input type="submit" name="" value="delete">
         </form>
     </body>

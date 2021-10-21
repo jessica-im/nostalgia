@@ -6,27 +6,27 @@
     </head>
     <body>
         <h1>edit collection item</h1>
-        <form class="" action="/timecapsule/<%=collection.id%>?_method=PUT" method="POST">
+        <form class="" action="/timecapsule/<%=item.id%>?_method=PUT" method="POST">
             <label for="name">item name:</label>
-            <input type="text" name="name" value="<%=collection.name%>">
-
-            <label for="description">description:</label>
-            <input type="text" name="description" value="<%=collection.description%>">
-
-            <label for="img">image link:</label>
-            <input type="text" name="img" value="<%=collection.img%>">
-
-            <label for="memory">memory:</label>
-            <input type="text" name="memory" value="<%=collection.memory%>">
+            <input type="text" name="name" value="<%=item.name%>">
 
             <label for="location">location:</label>
-            <input type="text" name="location" value="<%=collection.location%>">
+            <input type="text" name="location" value="<%=item.location%>">
 
             <label for="date">date:</label>
-            <input type="text" name="date" value="<%=collection.date%>">
+            <input type="text" name="date" value="<%=item.date%>">
+
+            <label for="img">image link:</label>
+            <input type="text" name="img" value="<%=item.img%>">
+
+            <label for="memory">memory:</label>
+            <input type="text" name="memory" value="<%=item.memory%>">
+
+            <label for="words">wise words for future self:</label>
+            <input type="text" name="words" value="<%=item.description%>">
 
             <input type="submit" name="" value="edit item">
         </form>
-        <a href="/timecapsule">back to collection</a>
+        <a href="/timecapsule">back to capsule</a>
     </body>
 </html>

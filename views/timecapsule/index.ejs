@@ -6,11 +6,12 @@
     </head>
     <body>
         <h1>my collection</h1>
-        <div class="collection-container">
-            <% for (let i = 0; i < collections.length; i++) { %>
-                <div class="collection-item-container">
-                    <a href="/timecapsule/<%=collections[i]._id%>"><%=collections[i].name%></a>
-                    <img src="<%=collections[i].img%>" alt="">
+        <div class="capsule-container">
+            <% for (let i = 0; i < timeCapsule.length; i++) { %>
+                <div class="capsule-item-container">
+                    <img src="<%=timeCapsule[i].img%>" alt="">
+                    <a href="/timecapsule/<%=timeCapsule[i]._id%>"><%=timeCapsule[i].name%></a>
+                    <p><%=timeCapsule[i].location%></p>
                 </div>
             <% } %>
         </div>
