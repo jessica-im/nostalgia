@@ -23,7 +23,9 @@
                     </div>
               <% } else { %>
                     <div class="capsule-item-container-odd">
-                        <a href="/timecapsule/<%=timeCapsule[i]._id%>"><img src="<%=timeCapsule[i].img%>" alt=""></a>
+                        <div class="img-container">
+                            <a href="/timecapsule/<%=timeCapsule[i]._id%>"><img src="<%=timeCapsule[i].img%>" alt=""></a>
+                        </div>
                         <div class="capsule-item-copy-odd">
                             <p>"<%=timeCapsule[i].words%>"</p>
                             <a href="/timecapsule/<%=timeCapsule[i]._id%>">-<%=timeCapsule[i].name%></a>
