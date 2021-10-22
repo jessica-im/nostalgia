@@ -13,7 +13,9 @@
             <% for (let i = 0; i < timeCapsule.length; i++) { %>
                 <% if (i % 2 === 0){ %>
                     <div class="capsule-item-container-even">
-                        <a href="/timecapsule/<%=timeCapsule[i]._id%>"><img src="<%=timeCapsule[i].img%>" alt=""></a>
+                        <div class="img-container">
+                            <a href="/timecapsule/<%=timeCapsule[i]._id%>"><img src="<%=timeCapsule[i].img%>" alt=""></a>
+                        </div>
                         <div class="capsule-item-copy-even">
                             <p>"<%=timeCapsule[i].words%>"</p>
                             <a href="/timecapsule/<%=timeCapsule[i]._id%>">-<%=timeCapsule[i].name%></a>

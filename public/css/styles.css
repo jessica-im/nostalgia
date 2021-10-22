@@ -4,20 +4,25 @@
     text-transform: lowercase;
 }
 
-img {
-    height: 200px;
-    width: 200px;
-    object-fit: contain;
-    border: 2px solid whitesmoke;
-    filter: grayscale(20%);
-    /* background-color: whitesmoke; */
-}
-
 a {
     text-decoration: none;
     margin: 0;
     padding: 0;
     color: black;
+}
+
+.img-container {
+    /* max-height: 200px; */
+    max-width: 200px;
+    object-fit: contain;
+}
+
+img {
+    max-width: 200px;
+    max-height: 200px;
+    border: 2px solid whitesmoke;
+    filter: grayscale(20%);
+    /* background-color: whitesmoke; */
 }
 
 .capsule-container {
