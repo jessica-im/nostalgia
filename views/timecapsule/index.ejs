@@ -7,32 +7,37 @@
     </head>
     <body>
         <div class="header-container">
-            <h1>time capsule</h1>
+            <nav>
+                <h1>time capsule</h1>
+                <a href="/timecapsule/new">add to capsule</a>
+            </nav>
         </div>
-        <div class="capsule-container">
-            <% for (let i = 0; i < timeCapsule.length; i++) { %>
-                <% if (i % 2 === 0){ %>
-                    <div class="capsule-item-container-even">
-                        <div class="img-container">
-                            <a href="/timecapsule/<%=timeCapsule[i]._id%>"><img src="<%=timeCapsule[i].img%>" alt=""></a>
+        <div class="background-container">
+            <div class="capsule-container">
+                <% for (let i = 0; i < timeCapsule.length; i++) { %>
+                    <% if (i % 2 === 0){ %>
+                        <div class="capsule-item-container-even">
+                            <div class="img-container">
+                                <a href="/timecapsule/<%=timeCapsule[i]._id%>"><img class="item-img" src="<%=timeCapsule[i].img%>" alt=""></a>
+                            </div>
+                            <div class="capsule-item-copy-even">
+                                <!-- <p>"<%=timeCapsule[i].words%>"</p> -->
+                                <a href="/timecapsule/<%=timeCapsule[i]._id%>"></a>
+                            </div>
                         </div>
-                        <div class="capsule-item-copy-even">
-                            <p>"<%=timeCapsule[i].words%>"</p>
-                            <a href="/timecapsule/<%=timeCapsule[i]._id%>">-<%=timeCapsule[i].name%></a>
+                  <% } else { %>
+                        <div class="capsule-item-container-odd">
+                            <div class="img-container">
+                                <a href="/timecapsule/<%=timeCapsule[i]._id%>"><img class="item-img" src="<%=timeCapsule[i].img%>" alt=""></a>
+                            </div>
+                            <div class="capsule-item-copy-odd">
+                                <!-- <p>"<%=timeCapsule[i].words%>"</p> -->
+                                <a href="/timecapsule/<%=timeCapsule[i]._id%>"></a>
+                            </div>
                         </div>
-                    </div>
-              <% } else { %>
-                    <div class="capsule-item-container-odd">
-                        <div class="img-container">
-                            <a href="/timecapsule/<%=timeCapsule[i]._id%>"><img src="<%=timeCapsule[i].img%>" alt=""></a>
-                        </div>
-                        <div class="capsule-item-copy-odd">
-                            <p>"<%=timeCapsule[i].words%>"</p>
-                            <a href="/timecapsule/<%=timeCapsule[i]._id%>">-<%=timeCapsule[i].name%></a>
-                        </div>
-                    </div>
+                    <% } %>
                 <% } %>
-            <% } %>
+            </div>
         </div>
     </body>
 </html>

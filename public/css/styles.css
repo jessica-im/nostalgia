@@ -4,6 +4,13 @@
     text-transform: lowercase;
 }
 
+.background-container {
+    background-image: url(https://www.dreadcentral.com/wp-content/uploads/2016/06/image2.jpg);
+    background-repeat: no-repeat;
+    object-fit: scale-down;
+    background-color: #f0c47b;
+}
+
 a {
     text-decoration: none;
     margin: 0;
@@ -12,18 +19,20 @@ a {
 }
 
 .img-container {
-    height: 200px;
-    width: 200px;
+    height: 225px;
+    width: 225px;
     margin: 0 auto;
     background-color: #ccc;
 }
 
-img {
+.item-img {
     /* width: 100%;
     height: auto; */
-    height: 200px;
-    width: 200px;
+    height: 225px;
+    width: 225px;
     border: 2px solid whitesmoke;
+    filter: grayscale(30%) sepia(20%);
+    /* filter: sepia(40%); */
     object-fit: cover;
     /* filter: grayscale(20%); */
 }
@@ -32,17 +41,21 @@ img {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    gap: 30px;
+    max-width: 1000px;
+    gap: 60px;
     /* background-color: thistle; */
     padding: 20px;
-    margin-left: 20px;
-    margin-right: 20px;
+    margin: 0 auto;
+    /* margin-left: 20px; */
+    /* margin-right: 20px; */
 }
 
 .capsule-item-container-even {
+    transform: rotate(1deg);
     display: flex;
     flex-direction: column;
-    padding: 10px 10px 0 10px;
+    max-height: 300px;
+    padding: 15px 15px 0 15px;
     background-color: white;
     border: 2px solid whitesmoke;
     box-shadow: 2px 1px 1px gray;
@@ -51,7 +64,7 @@ img {
 
 .capsule-item-container-even:hover {
     box-shadow: 7px 6px 5px rgb(126, 225, 186);
-    transform: rotate(5deg);
+    transform: rotate(0deg);
 }
 
 .capsule-item-copy-even {
@@ -59,22 +72,24 @@ img {
     justify-content: space-around;
     flex-direction: column;
     align-items: center;
+    font-size: 16px;
     max-width: 250px;
+    height: 60px;
     padding-top: 10px;
     background-color: white;
-    object-fit: contain;
 }
 
 .capsule-item-copy-even a:hover {
     font-size: 20px;
     font-weight: bold;
-    object-fit: contain;
 }
 
 .capsule-item-container-odd {
+    transform: rotate(-1deg);
     display: flex;
     flex-direction: column;
-    padding: 10px 10px 0 10px;
+    max-height: 300px;
+    padding: 15px 15px 0 15px;
     background-color: white;
     border: 2px solid whitesmoke;
     box-shadow: 2px 1px 1px gray;
@@ -83,7 +98,7 @@ img {
 
 .capsule-item-container-odd:hover {
     box-shadow: 7px 6px 5px rgb(126, 225, 186);
-    transform: rotate(-5deg);
+    transform: rotate(0deg);
 }
 
 .capsule-item-copy-odd {
@@ -91,10 +106,11 @@ img {
     justify-content: space-around;
     flex-direction: column;
     align-items: center;
+    font-size: 16px;
     max-width: 250px;
+    height: 60px;
     padding-top: 10px;
     background-color: white;
-    object-fit: contain;
 }
 
 .capsule-item-copy-odd a:hover {
