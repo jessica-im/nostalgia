@@ -3,33 +3,39 @@
     <head>
         <meta charset="utf-8">
         <title></title>
+        <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&family=Pangolin&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="/css/styles.css">
+        <link rel="stylesheet" href="/css/edit.css">
     </head>
     <body>
+        <nav class="sticky">
+            <%- include ('../partials/nav.ejs') %>
+        </nav>
         <h1>edit capsule item</h1>
-        <form class="" action="/timecapsule/<%=item.id%>?_method=PUT" method="POST">
+        <form class="form" action="/timecapsule/<%=item.id%>?_method=PUT" method="POST">
             <label for="name">your name:</label>
-            <input type="text" name="name" value="<%=item.name%>">
+            <input type="text" name="name" value="<%=item.name%>"><br><br>
 
             <label for="item">item name:</label>
-            <input type="text" name="item" value="<%=item.item%>">
+            <input type="text" name="item" value="<%=item.item%>"><br><br>
 
             <label for="location">location:</label>
-            <input type="text" name="location" value="<%=item.location%>">
+            <input type="text" name="location" value="<%=item.location%>"><br><br>
 
             <label for="date">date:</label>
-            <input type="text" name="date" value="<%=item.date%>">
+            <input type="text" name="date" value="<%=item.date%>"><br><br>
 
             <label for="img">image link:</label>
-            <input type="text" name="img" value="<%=item.img%>">
+            <input type="text" name="img" value="<%=item.img%>"><br><br>
 
-            <label for="memory">memory:</label>
-            <input type="text" name="memory" value="<%=item.memory%>">
+            <label for="memory">memory:</label><br>
+            <textarea type="text" name="memory" value="<%=item.memory%>"><%=item.memory%></textarea><br><br>
 
-            <label for="words">wise words for future self:</label>
-            <input type="text" name="words" value="<%=item.words%>">
+            <label for="words">wise words for future self:</label><br>
+            <textarea type="text" name="words" value="<%=item.words%>"><%=item.words%></textarea><br><br>
 
-            <input type="submit" name="" value="edit item">
+            <input class="btn" type="submit" name="" value="edit item">
         </form>
-        <a href="/timecapsule">back to capsule</a>
+        <a class="back" href="/timecapsule">back to capsule</a>
     </body>
 </html>

@@ -3,20 +3,26 @@
     <head>
         <meta charset="utf-8">
         <title></title>
+        <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&family=Pangolin&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="/css/styles.css">
+        <link rel="stylesheet" href="/css/edit.css">
     </head>
     <body>
+        <nav class="sticky">
+            <%- include ('../partials/nav.ejs') %>
+        </nav>
         <div class="signupContainer">
             <h1>sign up</h1>
             <form class="signup" action="/users" method="POST">
                 <label for="name">first name:</label>
-                <input type="text" name="name" required/>
+                <input type="text" name="name" required/><br><br>
                 <label for="email">email:</label>
-                <input type="email" name="email" required/>
+                <input type="email" name="email" required/><br><br>
                 <label for="username">username:</label>
-                <input type="text" name="username" required/>
+                <input type="text" name="username" required/><br><br>
                 <label for="password">password:</label>
                 <input type="password" id="password" name="password" required />
-                <br>
+                <br><br><br>
                 <input type="submit" value="sign up">
             </form>
         </div>

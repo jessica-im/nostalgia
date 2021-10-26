@@ -1,8 +1,18 @@
 * {
     /* font-family: 'Courier'; */
-    font-family: 'Indie Flower';
+    /* font-family: 'Indie Flower'; */
+    font-family: 'Pangolin';
     text-align: center;
     text-transform: lowercase;
+}
+
+.logo {
+    margin-left: 10px;
+}
+
+.logo:hover {
+    background-color: #f6ca99;
+    color: #aae3f1;
 }
 
 .sticky {
@@ -24,6 +34,7 @@
 
 nav h1 {
     padding-left: 10px;
+    margin-left: 10px;
 }
 
 nav li {

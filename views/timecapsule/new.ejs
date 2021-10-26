@@ -3,33 +3,39 @@
     <head>
         <meta charset="utf-8">
         <title></title>
+        <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&family=Pangolin&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="/css/styles.css">
+        <link rel="stylesheet" href="/css/edit.css">
     </head>
     <body>
+        <nav class="sticky">
+            <%- include ('../partials/nav.ejs') %>
+        </nav>
         <h1>add new capsule item</h1>
-        <form class="" action="/timecapsule" method="POST">
+        <form class="form" action="/timecapsule" method="POST">
             <label for="item">item name:</label>
-            <input type="text" name="item">
+            <input type="text" name="item"><br><br>
 
             <label for="name">your name:</label>
-            <input type="text" name="name">
+            <input type="text" name="name"><br><br>
 
             <label for="location">location:</label>
-            <input type="text" name="location">
+            <input type="text" name="location"><br><br>
 
             <label for="date">date:</label>
-            <input type="date" name="date">
+            <input type="date" name="date"><br><br>
 
             <label for="img">image link:</label>
-            <input type="text" name="img">
+            <input type="text" name="img"><br><br>
 
-            <label for="memory">memory:</label>
-            <input type="text" name="memory">
+            <label for="memory">memory:</label><br>
+            <textarea type="text" name="memory"></textarea><br><br>
 
-            <label for="words">wise words for future self:</label>
-            <input type="text" name="words">
+            <label for="words">wise words for future self:</label><br>
+            <textarea type="text" name="words"></textarea><br><br>
 
-            <input type="submit" name="" value="add item">
+            <input class="btn" type="submit" name="" value="add item">
         </form>
-        <a href="/timecapsule">back to capsule</a>
+        <a class="back" href="/timecapsule">back to capsule</a>
     </body>
 </html>

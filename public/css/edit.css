@@ -1,0 +1,52 @@
+* {
+    font-family: 'Pangolin'
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.form {
+    font-size: 20px;
+}
+
+input {
+    font-size: 16px;
+}
+
+textarea {
+    width: 200px;
+    height: 200px;
+    font-size: 16px;
+}
+
+.back {
+    border: 2px solid #f6ca99;
+    border-radius: 4px;
+    padding: 10px;
+    transition: .5s;
+    width: 60px;
+    margin: 0 auto;
+}
+
+.back:hover {
+    background-color: #aae3f1;
+    box-shadow: 7px 6px 5px #f6ca99;
+}
+
+.btn {
+    border: 2px solid #f6ca99;
+    border-radius: 4px;
+    padding: 10px;
+    background-color: #aae3f1;
+    font-size: 16px;
+    transition: .5s;
+}
+
+.btn:hover {
+    background-color: white;
+    border: 2px solid #f4c6c5;
+    box-shadow: 7px 6px 5px #aae3f1;
+}
