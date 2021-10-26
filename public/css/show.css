@@ -4,3 +4,39 @@
     text-align: center;
     text-transform: lowercase;
 }
+
+.item-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    margin-top: 50px;
+    margin-bottom: 20px;
+    background: url(https://media.istockphoto.com/photos/white-lines-paper-school-background-picture-id1187716877?b=1&k=20&m=1187716877&s=170667a&w=0&h=9hi79WkZqIR4rfI4Sv2IHeXprga0KfS414OiPAf0leM=) no-repeat center center fixed;
+    background-size: 1000px;
+    height: 800px;
+}
+
+.capsule-item-container-even {
+    max-width: 225px;
+}
+
+.quote-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.memory-container {
+    border: 2px solid #f6ca99;
+    border-radius: 4px;
+    padding: 10px;
+    background-color: white;
+}
+
+.words-container {
+    border: 2px solid #f6ca99;
+    border-radius: 4px;
+    padding: 10px;
+    background-color: white;
+}

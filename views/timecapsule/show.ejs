@@ -4,21 +4,37 @@
         <meta charset="utf-8">
         <title></title>
         <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="/css/show.css">
         <link rel="stylesheet" href="/css/styles.css">
+        <link rel="stylesheet" href="/css/show.css">
     </head>
     <body>
         <nav class="sticky">
             <%- include ('../partials/nav.ejs') %>
         </nav>
         <div class="item-container">
-            <h3><%=item.item%></h3>
-            <p><%=item.name%></p>
-            <p><%=item.date%></p>
-            <p><%=item.location%></p>
-            <img src="<%=item.img%>" alt="">
-            <p><%=item.memory%></p>
-            <p><%=item.words%></p>
+            <div class="item-info">
+                <h3>title: <%=item.item%></h3>
+                <p>by: <%=item.name%></p>
+                <p><%=item.date%></p>
+                <p><%=item.location%></p>
+            </div>
+            <div class="capsule-item-container-even">
+                <div class="img-container">
+                    <img class="item-img" src="<%=item.img%>" alt="">
+                </div>
+                <div class="capsule-item-copy-even">
+                </div>
+            </div>
+            <div class="quote-container">
+                <div class="memory-container">
+                    <h4>something to remember:</h4>
+                    <p><%=item.memory%></p>
+                </div>
+                <div class="words-container">
+                    <h4>words for future self:</h4>
+                    <p><%=item.words%></p>
+                </div>
+            </div>
         </div>
         <a href="/timecapsule">back to capsule</a>
         <a href="/timecapsule/<%=item.id%>/edit">edit item</a>
