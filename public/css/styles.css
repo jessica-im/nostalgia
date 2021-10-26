@@ -6,6 +6,10 @@
     text-transform: lowercase;
 }
 
+body {
+    background-color:
+}
+
 .logo {
     margin-left: 10px;
 }
@@ -44,7 +48,8 @@ nav li {
 
 .background-container {
   background: url(https://2.bp.blogspot.com/-IZAeghpJivM/UZdp3t1Iu8I/AAAAAAAAc-o/igW5CTYbhDw/s1600/suburbia_Edward+Scissorhands.jpg) no-repeat center center fixed;
-  background-size: 1200px;
+  /* background: url(https://c.stocksy.com/a/TBX000/z9/127563.jpg) no-repeat center center fixed; */
+  /* background-size: 1200px; */
   margin: 0 auto;
   margin-top: 20px;
 
@@ -64,6 +69,7 @@ a {
     width: 225px;
     margin: 0 auto;
     background-color: #ccc;
+    border: 1px solid whitesmoke;
 }
 
 .item-img {
@@ -160,4 +166,13 @@ a {
     font-size: 20px;
     font-weight: bold;
     object-fit: contain;
+}
+
+@media only screen and (max-width: 500px) {
+
+    .background-container {
+       background: none;
+       background-color: #c5dfd2;
+    }
+
 }
