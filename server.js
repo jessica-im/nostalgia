@@ -68,7 +68,7 @@ app.use('/sessions', sessionsController)
 //////////////////////////////////
 //localhost:3000
 app.get('/' , (req, res) => {
-  res.send('~ n o s t a l g i a ~');
+  res.redirect('/timecapsule');
 });
 
 //////////////////////////////////

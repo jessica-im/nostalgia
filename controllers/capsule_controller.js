@@ -3,24 +3,33 @@ const Item = require('../models/item.js')
 const timecapsule = express.Router()
 const collectionSeed = require('../models/collectionSeed.js');
 
+const isAuthenticated = (req, res, next) => {
+    if (req.session.currentUser) {
+        return next()
+    } else {
+        res.redirect('/sessions/new')
+    }
+}
+
 // new
-timecapsule.get('/new', (req, res) => {
-    res.render('timecapsule/new.ejs')
+timecapsule.get('/new', isAuthenticated, (req, res) => {
+    res.render('timecapsule/new.ejs', {currentUser: req.session.currentUser})
 })
 
 // edit
-timecapsule.get('/:id/edit', (req, res) => {
+timecapsule.get('/:id/edit', isAuthenticated, (req, res) => {
     Item.findById(req.params.id, (error, foundItem) => {
         res.render('timecapsule/edit.ejs', {
-            item: foundItem
+            item: foundItem,
+            currentUser: req.session.currentUser
         })
     })
 })
 
 // delete
-timecapsule.delete('/:id', (req, res) => {
+timecapsule.delete('/:id', isAuthenticated, (req, res) => {
     Item.findByIdAndRemove(req.params.id, (err, deletedItem) => {
-        res.redirect('/timecapsule')
+        res.redirect('/timecapsule', {currentUser: req.session.currentUser})
     })
 })
 
@@ -28,7 +37,8 @@ timecapsule.delete('/:id', (req, res) => {
 timecapsule.get('/:id', (req, res) => {
     Item.findById(req.params.id, (error, foundItem) => {
             res.render('timecapsule/show.ejs', {
-                item: foundItem
+                item: foundItem,
+                currentUser: req.session.currentUser
         })
     })
 })
@@ -54,7 +64,8 @@ timecapsule.post('/', (req, res) => {
 timecapsule.get('/', (req, res) => {
     Item.find({}, (error, fullCapsule) => {
         res.render('timecapsule/index.ejs', {
-            timeCapsule: fullCapsule
+            timeCapsule: fullCapsule,
+            currentUser: req.session.currentUser
         })
     })
 })

@@ -3,8 +3,14 @@
     <head>
         <meta charset="utf-8">
         <title></title>
+        <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="/css/show.css">
+        <link rel="stylesheet" href="/css/styles.css">
     </head>
     <body>
+        <nav class="sticky">
+            <%- include ('../partials/nav.ejs') %>
+        </nav>
         <div class="item-container">
             <h3><%=item.item%></h3>
             <p><%=item.name%></p>

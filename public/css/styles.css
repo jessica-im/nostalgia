@@ -1,14 +1,43 @@
 * {
-    font-family: 'Courier';
+    /* font-family: 'Courier'; */
+    font-family: 'Indie Flower';
     text-align: center;
     text-transform: lowercase;
 }
 
+.sticky {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.list-inline {
+	list-style-type: none;
+	margin-left: 2em;
+	margin-right: 2em;
+	padding: 0;
+}
+
+nav h1 {
+    padding-left: 10px;
+}
+
+nav li {
+    display: inline;
+    padding: 10px;
+}
+
 .background-container {
-    background-image: url(https://www.dreadcentral.com/wp-content/uploads/2016/06/image2.jpg);
-    background-repeat: no-repeat;
-    object-fit: scale-down;
-    background-color: #f0c47b;
+  background: url(https://2.bp.blogspot.com/-IZAeghpJivM/UZdp3t1Iu8I/AAAAAAAAc-o/igW5CTYbhDw/s1600/suburbia_Edward+Scissorhands.jpg) no-repeat center center fixed;
+  background-size: 1200px;
+  margin: 0 auto;
+  margin-top: 20px;
+  background-color: #f6ca99;
+  /* background-size: cover; */
+  /* max-width: 1000px; */
 }
 
 a {
@@ -60,10 +89,11 @@ a {
     border: 2px solid whitesmoke;
     box-shadow: 2px 1px 1px gray;
     transition: .5s;
+    margin-top: 30px;
 }
 
 .capsule-item-container-even:hover {
-    box-shadow: 7px 6px 5px rgb(126, 225, 186);
+    box-shadow: 7px 6px 5px #f6ca99;
     transform: rotate(0deg);
 }
 
@@ -94,10 +124,11 @@ a {
     border: 2px solid whitesmoke;
     box-shadow: 2px 1px 1px gray;
     transition: .5s;
+    margin-top: 40px;
 }
 
 .capsule-item-container-odd:hover {
-    box-shadow: 7px 6px 5px rgb(126, 225, 186);
+    box-shadow: 7px 6px 5px #f6ca99;
     transform: rotate(0deg);
 }
 
