@@ -8,6 +8,9 @@
         <link rel="stylesheet" href="/css/edit.css">
     </head>
     <body>
+        <nav class="sticky">
+            <%- include ('../partials/nav.ejs') %>
+        </nav>
         <div class="loginContainer">
             <h1>log in</h1>
             <form class="login" action="/sessions" method="POST">
