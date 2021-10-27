@@ -29,7 +29,7 @@ timecapsule.get('/:id/edit', isAuthenticated, (req, res) => {
 // delete
 timecapsule.delete('/:id', isAuthenticated, (req, res) => {
     Item.findByIdAndRemove(req.params.id, (err, deletedItem) => {
-        res.redirect('/timecapsule', {currentUser: req.session.currentUser})
+        res.redirect('/timecapsule')
     })
 })
 

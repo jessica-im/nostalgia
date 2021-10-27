@@ -6,10 +6,6 @@
     text-transform: lowercase;
 }
 
-body {
-    background-color:
-}
-
 .logo {
     margin-left: 10px;
 }
@@ -52,7 +48,7 @@ nav li {
   /* background-size: 1200px; */
   margin: 0 auto;
   margin-top: 20px;
-
+  background-color: #c5dfd2;
   /* background-size: cover; */
   /* max-width: 1000px; */
 }
@@ -169,6 +165,14 @@ a {
 }
 
 @media only screen and (max-width: 500px) {
+
+    * {
+        font-size: 20px;
+    }
+
+    a {
+        font-size: 20px;
+    }
 
     .background-container {
        background: none;
